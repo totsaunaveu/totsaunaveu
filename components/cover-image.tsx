@@ -15,10 +15,10 @@ interface Props {
 export default function CoverImage({ title, coverImage, slug }: Props) {
   const image = (
     <Image
-      width={100}
-      height={100}
-      priority
       layout="responsive"
+      width={16}
+      height={8}
+      priority
       objectFit="cover"
       alt={`Imagen destacada de ${title}`}
       src={coverImage?.node.sourceUrl}
