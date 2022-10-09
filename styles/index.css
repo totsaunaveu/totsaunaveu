@@ -20,6 +20,12 @@
   }
 }
 
+@layer components {
+  ul {
+    @apply font-serif;
+  }
+}
+
 .has-text-align-left {
   @apply text-left;
 }

@@ -1,8 +1,8 @@
-import Avatar from './avatar'
-import Date from './date'
-import CoverImage from './cover-image'
-import Categories from './categories'
-import Link from 'next/link'
+import Avatar from "./avatar";
+import Date from "./date";
+import CoverImage from "./cover-image";
+import Categories from "./categories";
+import Link from "next/link";
 
 export default function PostPreview({
   title,
@@ -11,8 +11,8 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
+  categories,
 }) {
-  
   return (
     <div>
       <div className="mb-2">
@@ -29,12 +29,14 @@ export default function PostPreview({
         </Link>
       </h3>
       <div className="text-sm mb-4">
-        <Date dateString={date} />
+        <Date dateString={date} />. Escrito por{' '}
+        <Avatar author={author} />.
+        {/* <Categories categories={categories} />. */}
       </div>
       <div
         className="text-lg leading-relaxed mb-4"
         dangerouslySetInnerHTML={{ __html: excerpt }}
       />
     </div>
-  )
+  );
 }
