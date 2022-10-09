@@ -14,7 +14,7 @@ export default function Index({ allPosts: { edges }, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>delsValencians</title>
+        <title>DELS VALENCIANS</title>
       </Head>
       <Container>
         <Intro />

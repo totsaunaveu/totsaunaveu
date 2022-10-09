@@ -1,30 +1,59 @@
-import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+import Container from "./container";
+import { EXAMPLE_PATH } from "../lib/constants";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
+    <footer className="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
       <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
+        <div className="mx-auto max-w-screen-xl text-center">
+          <h2 className="text-3xl md:text-3xl font-bold text-center uppercase tracking-tight md:tracking-tighter leading-none mb-4 mt-4">
+            <Link href="/">
+              <a>
+                <span className="text-lg">Dels</span> <br />
+                Valencians
+              </a>
+            </Link>
+          </h2>
+          <p className="my-6 text-gray-500 dark:text-gray-400">
+            La veu dels valencians. Diari de la província de València.
+          </p>
+          <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+            <li>
+              <a href="#" className="mr-4 hover:underline md:mr-6 ">
+                Valencia
+              </a>
+            </li>
+            <li>
+              <a href="#" className="mr-4 hover:underline md:mr-6">
+                Comarcas
+              </a>
+            </li>
+            <li>
+              <a href="#" className="mr-4 hover:underline md:mr-6">
+                Opinión
+              </a>
+            </li>
+            <li>
+              <a href="#" className="mr-4 hover:underline md:mr-6">
+                Colabora
+              </a>
+            </li>
+            <li>
+              <a href="#" className="mr-4 hover:underline md:mr-6">
+                Escríbenos
+              </a>
+            </li>
+          </ul>
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2022{" "}
+            <a href="#" className="hover:underline">
+              Dels Valencians
             </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
+            . Tots els drets reservats.
+          </span>
         </div>
       </Container>
     </footer>
-  )
+  );
 }
