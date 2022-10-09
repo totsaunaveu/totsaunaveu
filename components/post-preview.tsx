@@ -8,7 +8,6 @@ export default function PostPreview({
   title,
   coverImage,
   date,
-  category,
   excerpt,
   author,
   slug,
