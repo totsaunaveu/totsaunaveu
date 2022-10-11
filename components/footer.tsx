@@ -40,9 +40,11 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <Link href="/escribenos">
               <a href="#" className="mr-4 hover:underline md:mr-6">
                 Escríbenos
               </a>
+            </Link>
             </li>
           </ul>
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
