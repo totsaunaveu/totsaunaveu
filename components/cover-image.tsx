@@ -16,10 +16,10 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
   const image = (
     <Image
       layout="responsive"
-      width={16}
-      height={8}
+      width={5}
+      height={4}
       priority
-      objectFit="cover"
+      objectFit="contain"
       alt={`Imagen destacada de ${title}`}
       src={coverImage?.node.sourceUrl}
       className={cn("shadow-small", {
