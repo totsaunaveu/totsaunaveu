@@ -1,4 +1,6 @@
 import { CMS_NAME, CMS_URL } from "../lib/constants";
+import Link from 'next/link'
+
 
 export default function Intro() {
   return (
@@ -8,11 +10,11 @@ export default function Intro() {
         Valencians
       </h1>
       <h4 className="text-center font-lora md:text-center text-lg mt-5">
-      La veu dels valencians. Diari de la província de València.
+        La veu dels valencians. Diari de la província de València.
       </h4>
 
       <div className="justify-between items-center text-center w-full lg:flex lg:w-auto">
-        <ul className="flex flex-row flex-wrap justify-center	font-serif mt-6 mb-6 lg:space-x-8 lg:mt-12">
+        <ul className="flex flex-row flex-wrap justify-center	font-serif font-semibold mt-6 mb-6 lg:space-x-8 lg:mt-12">
           <li>
             <a href="#" className="uppercase hover:underline mr-4 mb-4">
               Valencia
@@ -34,9 +36,9 @@ export default function Intro() {
             </a>
           </li>
           <li>
-            <a href="#" className="uppercase hover:underline mr-4 mb-4">
-              Escríbenos
-            </a>
+            <Link href="/escribenos">
+              <a className="uppercase hover:underline mr-4 mb-4">Escríbenos</a>
+            </Link>
           </li>
         </ul>
       </div>
