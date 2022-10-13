@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://delsvalencians.es
+
+# Sitemaps
+Sitemap: https://delsvalencians.es/sitemap.xml
