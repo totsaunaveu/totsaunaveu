@@ -67,7 +67,7 @@ export default function Meta() {
         name="description"
         content={`La veu dels valencians. Diari de la província de València.`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      {/* <meta property="og:image" content={HOME_OG_IMAGE_URL} /> */}
     </Head>
   );
 }
