@@ -1,14 +1,46 @@
 import Head from "next/head";
 import { HOME_OG_IMAGE_URL } from "../lib/constants";
+import Image from "next/image";
+import CoverImage from "./cover-image";
 
-export default function Meta() {
+interface Props {
+  coverImage: {
+    node: {
+      sourceUrl: string;
+    };
+  };
+}
+
+export default function Meta({ coverImage }: Props) {
+
+  const image = coverImage?.node.sourceUrl
   return (
     <Head>
-      <link rel="android-icon" sizes="48x48" href="favicon/android-icon-48x48.png" />
-      <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
-      <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
-      <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
-      <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
+      <link
+        rel="android-icon"
+        sizes="48x48"
+        href="favicon/android-icon-48x48.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="57x57"
+        href="favicon/apple-icon-57x57.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="60x60"
+        href="favicon/apple-icon-60x60.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="72x72"
+        href="favicon/apple-icon-72x72.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="76x76"
+        href="favicon/apple-icon-76x76.png"
+      />
       <link
         rel="apple-touch-icon"
         sizes="114x114"
@@ -60,14 +92,17 @@ export default function Meta() {
       />
       <link rel="manifest" href="favicon/manifest.json" />
       <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png" />
+      <meta
+        name="msapplication-TileImage"
+        content="favicon/ms-icon-144x144.png"
+      />
       <meta name="theme-color" content="#ffffff" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
         content={`La veu dels valencians. Diari de la província de València.`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta property="og:image" content={image} key="ogimage" />
     </Head>
   );
 }
