@@ -5,6 +5,7 @@ import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
+import Subscribe from '../components/subscribe'
 import { HOME_OG_IMAGE_URL } from "../lib/constants";
 import { getAllPostsForHome } from '../lib/api'
 
@@ -30,6 +31,7 @@ export default function Index({ allPosts: { edges }, preview }) {
             excerpt={heroPost.excerpt}
           />
         )}
+        <Subscribe />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
     </Layout>
