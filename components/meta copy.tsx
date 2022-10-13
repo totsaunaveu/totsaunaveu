@@ -1,20 +1,8 @@
 import Head from "next/head";
 import { HOME_OG_IMAGE_URL } from "../lib/constants";
-import Image from "next/image";
 import CoverImage from "./cover-image";
 
-interface Props {
-  coverImage: {
-    node: {
-      sourceUrl: string;
-    };
-  };
-}
-
-export default function Meta({ coverImage }: Props) {
-
-  const image = coverImage?.node.sourceUrl
-
+export default function Meta() {
   return (
     <Head>
       <link rel="android-icon" sizes="48x48" href="favicon/android-icon-48x48.png" />
@@ -80,7 +68,7 @@ export default function Meta({ coverImage }: Props) {
         name="description"
         content={`La veu dels valencians. Diari de la província de València.`}
       />
-      <meta property="og:image" content={ image } />
+      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   );
 }

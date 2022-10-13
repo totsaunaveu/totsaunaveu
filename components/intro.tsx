@@ -1,6 +1,6 @@
 import { CMS_NAME, CMS_URL } from "../lib/constants";
-import Link from 'next/link'
-
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Intro() {
   return (
@@ -17,7 +17,15 @@ export default function Intro() {
         <ul className="flex flex-row flex-wrap justify-center	font-serif font-semibold mt-6 mb-6 lg:space-x-8 lg:mt-12">
           <li>
             <a href="#" className="uppercase hover:underline mr-4 mb-4">
-              Valencia
+              <span>
+                <Image
+                  src="/senyera.svg"
+                  layout="fixed"
+                  width={20}
+                  height={12}
+                />
+              </span>{" "}
+              En Valencià
             </a>
           </li>
           <li>
@@ -28,11 +36,6 @@ export default function Intro() {
           <li>
             <a href="#" className="uppercase hover:underline mr-4 mb-4">
               Opinión
-            </a>
-          </li>
-          <li>
-            <a href="#" className="uppercase hover:underline mr-4 mb-4">
-              Colabora
             </a>
           </li>
           <li>
