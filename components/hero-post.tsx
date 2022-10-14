@@ -14,12 +14,12 @@ export default function HeroPost({
 }) {
   return (
     <section>
-      <div className="mb-4 md:mb-8">
+      <div className="mb-2 md:mb-2">
         {coverImage && (
           <CoverImage title={title} coverImage={coverImage} slug={slug} />
         )}
       </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-8 md:mb-12">
+      <div className="md:grid md:grid-cols-2 md:gap-x-8 lg:gap-x-8 mb-8 md:mb-12">
         <div>
           <h3 className="mb-4 text-2xl lg:text-3xl leading-tight">
             <Link href={`/${slug}`}>
