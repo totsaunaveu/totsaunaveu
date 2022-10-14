@@ -29,6 +29,8 @@ export default function Index({ allPosts: { edges }, preview }) {
             author={heroPost.author}
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
+            categories={heroPost.categories}
+            
           />
         )}
         <Subscribe />

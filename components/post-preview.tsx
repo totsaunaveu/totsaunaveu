@@ -20,7 +20,7 @@ export default function PostPreview({
           <CoverImage title={title} coverImage={coverImage} slug={slug} />
         )}
       </div>
-      <h3 className="text-2xl mb-3 leading-snug">
+      <h3 className="text-2xl mb-2 leading-snug">
         <Link href={`/${slug}`}>
           <a
             className="hover:underline"
@@ -28,13 +28,13 @@ export default function PostPreview({
           ></a>
         </Link>
       </h3>
-      <div className="text-sm mb-4">
-        <Date dateString={date} />. Escrito por{' '}
-        <Avatar author={author} />.
-        {/* <Categories categories={categories} />. */}
+      <div className="text-xs mb-2">
+      <Categories categories={categories} />
+            <Date dateString={date} />
+            <Avatar author={author} />.
       </div>
       <div
-        className="text-lg leading-relaxed mb-4"
+        className="text-md leading-relaxed mb-4"
         dangerouslySetInnerHTML={{ __html: excerpt }}
       />
     </div>

@@ -1,26 +1,25 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Avatar({ author }) {
-  const isAuthorHaveFullName = author?.node?.firstName && author?.node?.lastName
+  const isAuthorHaveFullName =
+    author?.node?.firstName && author?.node?.lastName;
   const name = isAuthorHaveFullName
     ? `${author.node.firstName} ${author.node.lastName}`
-    : author.node.name || null
+    : author.node.name || null;
 
   return (
-   
-      <span className="underline">{name}</span>
-  
+    <span className="ml-1">{name}</span>
 
-  //   <div className="flex items-center">
-  //   <div className="w-12 h-12 relative mr-4">
-  //     <Image
-  //       src={author.node.avatar.url}
-  //       layout="fill"
-  //       className="rounded-full"
-  //       alt={name}
-  //     />
-  //   </div>
-  //   <div className="">{name}</div>
-  // </div>
-  )
+    //   <div className="flex items-center">
+    //   <div className="w-12 h-12 relative mr-4">
+    //     <Image
+    //       src={author.node.avatar.url}
+    //       layout="fill"
+    //       className="rounded-full"
+    //       alt={name}
+    //     />
+    //   </div>
+    //   <div className="">{name}</div>
+    // </div>
+  );
 }

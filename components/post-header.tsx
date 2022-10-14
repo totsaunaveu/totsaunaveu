@@ -25,9 +25,9 @@ export default function PostHeader({
           <Avatar author={author} />
         </div> */}
         <div className="mb-2 text-sm">
-          Publicado el <Date dateString={date} />
-          <Categories categories={categories} /> {''}
-          por <Avatar author={author} />.
+        <Categories categories={categories} />
+            <Date dateString={date} />
+            <Avatar author={author} />.
         </div>
       </div>
     </>
