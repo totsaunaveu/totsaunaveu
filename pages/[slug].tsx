@@ -14,6 +14,7 @@ import Tags from '../components/tags'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../lib/api'
 
 export default function Post({ post, posts, preview }) {
+  console.log('Console Log de Slug')
   const router = useRouter()
   const morePosts = posts?.edges
 
@@ -80,6 +81,7 @@ export const getStaticProps: GetStaticProps = async ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const allPosts = await getAllPostsWithSlug()
+  console.log(allPosts)
 
   return {
     paths: allPosts.edges.map(({ node }) => `/${node.slug}`) || [],

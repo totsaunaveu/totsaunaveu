@@ -18,7 +18,6 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
       layout="responsive"
       width={50}
       height={35}
-      priority
       objectFit="contain"
       alt={`Imagen destacada de ${title}`}
       src={coverImage?.node.sourceUrl}

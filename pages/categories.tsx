@@ -9,23 +9,7 @@ import CategoryPreview from "../components/category-preview";
 
 export default function Index({ allCategories: { edges }, preview }) {
   const categories = edges;
-  console.log(categories[1].node.posts.edges[1].node.title); // Aquí sacamos un título de un post.
 
-  console.log(categories) // Aquí mostramos el objeto completo con 9 nodos.
-
-  // Función para recoger los post de cada categoría en una lista. No funciona.
-
-  function postsByCategories (categories) {
-    
-    let categoriesNumber = 0;
-    for (let i = 0; i < categories.length; i++) {
-      if (categories[i] ) {
-        categoriesNumber++;
-      }
-    }
-    return categoriesNumber;
-  }
-  console.log(postsByCategories(categories))
 
   return (
     <Layout preview={preview}>
@@ -42,7 +26,6 @@ export default function Index({ allCategories: { edges }, preview }) {
               <CategoryPreview
                 key={node.slug}
                 name={node.name}
-                coverImage={node.featuredImage}
                 slug={node.slug}
                 description={node.description}
               />
