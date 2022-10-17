@@ -79,7 +79,7 @@ function Subscribe() {
           </form>
         </div>
         <div className="flex flex-col items-center mt-4 text-sky-900 py-px px-2 text-sm">
-          {message ? message : `Será necesario que confirmes en tu email la suscripción.`}
+          {message ? message : `Será necesario que confirmes la suscripción en tu email`}
         </div>
       </div>
     </div>

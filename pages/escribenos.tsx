@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { GetStaticProps } from 'next'
 import Container from '../components/container'
-import Header from '../components/header'
 import Contacta from '../components/contacta'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
@@ -19,7 +18,7 @@ export default function Escribenos({ allPosts: { edges }, preview }) {
         <title>DELS VALENCIANS</title>
       </Head>
       <Container>
-        <Header />
+        <Intro />
         <Contacta />
       </Container>
     </Layout>

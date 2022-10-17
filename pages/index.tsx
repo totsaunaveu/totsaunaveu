@@ -16,7 +16,7 @@ export default function Index({ allPosts: { edges }, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>DELS VALENCIANS</title>
+        <title>DELS VALENCIANS — La veu dels valencians</title>
         <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       </Head>
       <Container>
@@ -29,6 +29,8 @@ export default function Index({ allPosts: { edges }, preview }) {
             author={heroPost.author}
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
+            categories={heroPost.categories}
+            
           />
         )}
         <Subscribe />
