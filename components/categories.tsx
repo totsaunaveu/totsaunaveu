@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Categories({ categories }) {
   return (
     <span className="">
@@ -8,8 +10,10 @@ export default function Categories({ categories }) {
           </span>
         ))
       ) : (
-        <span className="uppercase font-semibold">{categories?.edges.node.name}.</span>
+        <span className="uppercase font-semibold">
+          {categories?.edges.node.name}.
+        </span>
       )}
     </span>
-  )
+  );
 }
