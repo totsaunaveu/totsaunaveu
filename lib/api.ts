@@ -299,6 +299,14 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
           }
         }
       }
+      categories {
+        edges {
+          node {
+            slug
+            name
+          }
+        }
+      }
     }
   `,
     {

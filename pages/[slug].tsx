@@ -11,12 +11,13 @@ import SectionSeparator from '../components/section-separator'
 import Layout from '../components/layout'
 import PostTitle from '../components/post-title'
 import Tags from '../components/tags'
-import { getAllPostsWithSlug, getPostAndMorePosts } from '../lib/api'
+import { getAllCategoriesWithSlug, getAllPostsWithSlug, getPostAndMorePosts } from '../lib/api'
 
-export default function Post({ post, posts, preview }) {
-  console.log('Console Log de Slug')
+export default function Post({ post, posts, categories, preview }) {
   const router = useRouter()
   const morePosts = posts?.edges
+  const AllCategories = categories?.edges
+  console.log(AllCategories)
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -74,6 +75,7 @@ export const getStaticProps: GetStaticProps = async ({
       preview,
       post: data.post,
       posts: data.posts,
+      categories: data.categories,
     },
     revalidate: 10,
   }
@@ -81,10 +83,10 @@ export const getStaticProps: GetStaticProps = async ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const allPosts = await getAllPostsWithSlug()
-  console.log(allPosts)
+  const allCategories = await getAllCategoriesWithSlug()
 
   return {
-    paths: allPosts.edges.map(({ node }) => `/${node.slug}`) || [],
+    paths: allPosts.edges.map(({ node }) => `/${node.slug}`) || allCategories.edges.map(({ node }) => `/${node.slug}`) || [], 
     fallback: true,
   }
 }
