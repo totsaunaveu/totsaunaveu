@@ -17,7 +17,7 @@ export default function Intro() {
 
       <div className="justify-between items-center text-center w-full lg:flex lg:w-auto">
         <ul className="flex flex-row flex-wrap justify-center text-sm	font-serif font-semibold mt-3 mb-3 lg:space-x-8 lg:mt-6">
-          <li>
+          {/* <li>
             <a href="#" className="uppercase hover:underline mr-4 mb-4">
               <span>
                 <Image
@@ -29,7 +29,7 @@ export default function Intro() {
               </span>{" "}
               En Valencià
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="#" className="uppercase hover:underline mr-4 mb-4">
               Comarcas

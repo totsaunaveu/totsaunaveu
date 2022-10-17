@@ -7,6 +7,7 @@ interface Props {
   coverImage: {
     node: {
       sourceUrl: string;
+      altText: string;
     };
   };
   slug?: string;
@@ -18,6 +19,7 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
       layout="responsive"
       width={50}
       height={35}
+      priority
       objectFit="contain"
       alt={`Imagen destacada de ${title}`}
       src={coverImage?.node.sourceUrl}
@@ -26,6 +28,8 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
       })}
     />
   );
+  const altText = coverImage?.node.altText;
+  // console.log(altText)
   return (
     <div className="sm:mx-0">
       {slug ? (
@@ -35,6 +39,7 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
       ) : (
         image
       )}
+      <span className="text-xs text-neutral-400">{altText}</span>
     </div>
   );
 }

@@ -89,6 +89,7 @@ export async function getAllPostsForHome(preview) {
             featuredImage {
               node {
                 sourceUrl
+                altText
               }
             }
             categories {
@@ -142,6 +143,7 @@ export async function getAllOpinionPosts(preview) {
             featuredImage {
               node {
                 sourceUrl
+                altText
               }
             }
             categories {
@@ -241,6 +243,7 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
       featuredImage {
         node {
           sourceUrl
+          altText
         }
       }
       author {
