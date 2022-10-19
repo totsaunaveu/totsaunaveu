@@ -39,7 +39,7 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
       ) : (
         image
       )}
-      <div className="max-w-2xl mx-auto text-xs text-neutral-400 md:text-sm">{altText}</div>
+      <div className="mx-auto text-xs text-neutral-400 md:text-sm">{altText}</div>
     </div>
     
   );
