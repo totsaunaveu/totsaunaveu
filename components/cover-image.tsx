@@ -29,7 +29,7 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
     />
   );
   const altText = coverImage?.node.altText;
-  // console.log(altText)
+  
   return (
     <div className="sm:mx-0">
       {slug ? (
@@ -39,7 +39,8 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
       ) : (
         image
       )}
-      <span className="text-xs text-neutral-400">{altText}</span>
+      <div className="text-xs text-neutral-400 md:text-sm">{altText}</div>
     </div>
+    
   );
 }
