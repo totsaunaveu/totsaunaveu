@@ -38,6 +38,36 @@ export default function HortaNord({ AllHNPosts: { edges }, preview }) {
         )}
         {hnPosts.length > 0 && <OpinionPosts posts={hnPosts} />}
         <Subscribe />
+        <h2 className="text-lg md:text-xl font-semibold mb-2 md:mb-4 tracking-tighter leading-tight">
+          Comarca de l'Horta Nord
+        </h2>
+        <p className="text-sm mb-4">
+          L'Horta Nord es la tercera comarca más poblada de la Provincia de
+          València, justo detrás de l'Horta Oest, con poco más de 221.000
+          habitantes y dónde encontramos como principales cascos urbanos
+          Burjassot, Alboraya, Moncada, Puçol, Massamagrell y Godella.
+        </p>
+        <p className="text-sm mb-4">
+          Los pueblos y ciudades que integran la comarca son: Albalat dels
+          Sorells, Alboraya, Albuixech, Alfara del Patriarca, Almàssera,
+          Burjassot, Bonrepòs i Mirambell, El Puig, Emperador, Foios, Godella,
+          La Pobla de Farnals, Massalfassar, Massamagrell, Meliana, Moncada,
+          Museros, Puçol, Rafelbunyol, Rocafort, Tavernes Blanques, Vinalesa.
+        </p>
+        <p className="text-sm mb-4">
+          L'Horta Norte estaba integrada anteriormente en la comarca de l'Horta
+          de València, así como l'Horta Oeste, l'Horta Sur y València Ciudad.
+          Aun así, a causa del crecimiento de todas estas comarcas, se tuvo que
+          dividir en las cuatro que conocemos actualmente. L'Horta Norte, en
+          particular, fue creada en 1989, y ya formaba parte del mapa de
+          comarcas de Emili Beüt publicado en 1934.
+        </p>
+        <p className="text-sm mb-4">
+          Por otro lado, en El Puig encontramos el monasterio de Santa Maria.
+          Allí, en esa localidad y en 1237, fue donde se libró la batalla final
+          de la conquista de València por Jaime I, la llamada Batalla del Puig.
+          Con motivo de agradecimiento, el rey lo hizo construir.
+        </p>
       </Container>
     </Layout>
   );
