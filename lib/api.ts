@@ -235,6 +235,277 @@ export async function getAllOpinionPosts(preview) {
   return data?.posts;
 }
 
+export async function getAllHNPosts(preview) {
+  const data = await fetchAPI(
+    `
+    query AllHNPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, categoryName: "horta-nord"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+export async function getAllHSPosts(preview) {
+  const data = await fetchAPI(
+    `
+    query AllHSPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, categoryName: "horta-sud"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+export async function getAllCTPosts(preview) {
+  const data = await fetchAPI(
+    `
+    query AllCTPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, categoryName: "camp-de-turia"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+export async function getAllCMPosts(preview) {
+  const data = await fetchAPI(
+    `
+    query AllCMPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, categoryName: "camp-de-morvedre"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+export async function getAllVLCPosts(preview) {
+  const data = await fetchAPI(
+    `
+    query AllVLCPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, categoryName: "valencia"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+
 export async function getAllCategories(preview) {
   const data = await fetchAPI(
     `
