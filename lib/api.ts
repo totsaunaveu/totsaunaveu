@@ -62,7 +62,7 @@ export async function getAllPostsWithSlug() {
 export async function getAllCategoriesWithSlug() {
   const data = await fetchAPI(`
   {
-    categories {
+    categories(where: {orderby: language: ES}) {
       edges {
         node {
           name
@@ -79,7 +79,7 @@ export async function getAllPostsForHome(preview) {
   const data = await fetchAPI(
     `
     query AllPosts {
-      posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
+      posts(first: 20, where: {orderby: {field: DATE, order: DESC}, language: ES}) {
         edges {
           node {
             title
@@ -125,6 +125,61 @@ export async function getAllPostsForHome(preview) {
 
   return data?.posts;
 }
+
+// AllPosts en Valenciano
+
+export async function getAllPostsForHomeVal(preview) {
+  const data = await fetchAPI(
+    `
+    query AllPosts {
+      posts(first: 20, where: {orderby: {field: DATE, order: DESC}, language: CA}) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+// Final API Valenciano
 
 export async function getAllOpinionPosts(preview) {
   const data = await fetchAPI(
