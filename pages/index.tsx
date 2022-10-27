@@ -10,9 +10,9 @@ import { HOME_OG_IMAGE_URL } from "../lib/constants";
 import { getAllPostsForHome, getAllFeaturedPostsForHome } from '../lib/api'
 // import { getAllFeaturedPostsForHome } from '../lib/api'
 
-export default function Index({ allPosts: { edges }, preview }) {
+export default function Index({ allPosts: { edges }, allFeaturedPosts: { edges: featuredEdges }, preview }) {
   const heroPost = edges[0]?.node
-  const heroFeaturedPost = edges[0]?.node
+  const heroFeaturedPost = featuredEdges[0]?.node
   const morePosts = edges.slice(1)
 
   return (
@@ -25,13 +25,13 @@ export default function Index({ allPosts: { edges }, preview }) {
         <Intro />
         {heroFeaturedPost && (
           <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.featuredImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-            categories={heroPost.categories}
+            title={heroFeaturedPost.title}
+            coverImage={heroFeaturedPost.featuredImage}
+            date={heroFeaturedPost.date}
+            author={heroFeaturedPost.author}
+            slug={heroFeaturedPost.slug}
+            excerpt={heroFeaturedPost.excerpt}
+            categories={heroFeaturedPost.categories}
             
           />
         )}
