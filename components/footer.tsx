@@ -27,28 +27,30 @@ export default function Footer() {
             </Link>
             </li>
             <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6">
-                Comarcas
+              <Link href="/horta">
+              <a className="mr-4 hover:underline md:mr-6 ">
+                l'Horta
               </a>
+            </Link>
             </li>
             <li>
-            <Link href="/opinion">
+              <Link href="/camp-de-turia">
+              <a className="mr-4 hover:underline md:mr-6 ">
+                Camp de Túria
+              </a>
+            </Link>
+            </li>
+            <li>
+              <Link href="/camp-de-morvedre">
+              <a className="mr-4 hover:underline md:mr-6 ">
+                Camp de Morvedre
+              </a>
+            </Link>
+            </li>
+            <li>
+              <Link href="/opinion">
               <a className="mr-4 hover:underline md:mr-6 ">
                 Opinión
-              </a>
-            </Link>
-            </li>
-            <li>
-            <Link href="/escribenos">
-              <a className="mr-4 hover:underline md:mr-6 ">
-                Colabora
-              </a>
-            </Link>
-            </li>
-            <li>
-              <Link href="/escribenos">
-              <a className="mr-4 hover:underline md:mr-6">
-                Escríbenos
               </a>
             </Link>
             </li>
