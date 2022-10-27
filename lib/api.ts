@@ -126,6 +126,60 @@ export async function getAllPostsForHome(preview) {
   return data?.posts;
 }
 
+export async function getAllFeaturedPostsForHome(preview) {
+  const data = await fetchAPI(
+    `
+    query AllFeaturedPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, language: ES, tag: "portada"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
 // AllPosts en Valenciano
 
 export async function getAllPostsForHomeVal(preview) {

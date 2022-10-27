@@ -36,13 +36,8 @@ export default function Intro() {
             </Link>
           </li>
           <li>
-            <Link href="/horta-nord">
-              <a className="uppercase hover:underline mr-4 mb-4">Horta Nord</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/horta-sud">
-              <a className="uppercase hover:underline mr-4 mb-4">Horta Sud</a>
+            <Link href="/horta">
+              <a className="uppercase hover:underline mr-4 mb-4">l'Horta</a>
             </Link>
           </li>
           <li>

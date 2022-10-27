@@ -7,10 +7,12 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import Subscribe from '../components/subscribe'
 import { HOME_OG_IMAGE_URL } from "../lib/constants";
-import { getAllPostsForHome } from '../lib/api'
+import { getAllPostsForHome, getAllFeaturedPostsForHome } from '../lib/api'
+// import { getAllFeaturedPostsForHome } from '../lib/api'
 
 export default function Index({ allPosts: { edges }, preview }) {
   const heroPost = edges[0]?.node
+  const heroFeaturedPost = edges[0]?.node
   const morePosts = edges.slice(1)
 
   return (
@@ -21,7 +23,7 @@ export default function Index({ allPosts: { edges }, preview }) {
       </Head>
       <Container>
         <Intro />
-        {heroPost && (
+        {heroFeaturedPost && (
           <HeroPost
             title={heroPost.title}
             coverImage={heroPost.featuredImage}
@@ -42,9 +44,10 @@ export default function Index({ allPosts: { edges }, preview }) {
 
 export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
   const allPosts = await getAllPostsForHome(preview)
+  const allFeaturedPosts = await getAllFeaturedPostsForHome(preview)
 
   return {
-    props: { allPosts, preview },
+    props: { allPosts, allFeaturedPosts, preview },
     revalidate: 10,
   }
 }
