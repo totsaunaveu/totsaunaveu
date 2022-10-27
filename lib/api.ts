@@ -289,67 +289,13 @@ export async function getAllOpinionPosts(preview) {
   return data?.posts;
 }
 
-export async function getAllHNPosts(preview) {
+export async function getAllHortaPosts(preview) {
   const data = await fetchAPI(
     `
     query AllHNPosts {
       posts(
         first: 20
-        where: {orderby: {field: DATE, order: DESC}, categoryName: "horta-nord"}
-      ) {
-        edges {
-          node {
-            title
-            excerpt
-            slug
-            date
-            featuredImage {
-              node {
-                sourceUrl
-                altText
-              }
-            }
-            categories {
-              edges {
-                node {
-                  name
-                  slug
-                }
-              }
-            }
-            author {
-              node {
-                name
-                firstName
-                lastName
-                avatar {
-                  url
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `,
-    {
-      variables: {
-        onlyEnabled: !preview,
-        preview,
-      },
-    }
-  );
-
-  return data?.posts;
-}
-
-export async function getAllHSPosts(preview) {
-  const data = await fetchAPI(
-    `
-    query AllHSPosts {
-      posts(
-        first: 20
-        where: {orderby: {field: DATE, order: DESC}, categoryName: "horta-sud"}
+        where: {orderby: {field: DATE, order: DESC}, categoryName: "horta"}
       ) {
         edges {
           node {

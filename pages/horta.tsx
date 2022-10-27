@@ -7,17 +7,17 @@ import Intro from "../components/intro";
 import Layout from "../components/layout";
 import Subscribe from "../components/subscribe";
 import { HOME_OG_IMAGE_URL } from "../lib/constants";
-import { getAllHNPosts } from "../lib/api";
+import { getAllHortaPosts } from "../lib/api";
 import Colabora from "../components/colabora";
 
-export default function HortaNord({ AllHNPosts: { edges }, preview }) {
+export default function HortaNord({ AllHortaPosts: { edges }, preview }) {
   const heroPost = edges[0]?.node;
   const hnPosts = edges.slice(1);
 
   return (
     <Layout preview={preview}>
       <Head>
-        <title>Horta Nord — DELS VALENCIANS</title>
+        <title>L'Horta — DELS VALENCIANS</title>
         <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       </Head>
       <Container>
@@ -74,10 +74,10 @@ export default function HortaNord({ AllHNPosts: { edges }, preview }) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
-  const AllHNPosts = await getAllHNPosts(preview);
+  const AllHortaPosts = await getAllHortaPosts(preview);
 
   return {
-    props: { AllHNPosts, preview },
+    props: { AllHortaPosts, preview },
     revalidate: 10,
   };
 };
