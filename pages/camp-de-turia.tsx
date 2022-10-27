@@ -38,6 +38,23 @@ export default function CampDeTuria({ AllCTPosts: { edges }, preview }) {
         )}
         {ctPosts.length > 0 && <OpinionPosts posts={ctPosts} />}
         <Subscribe />
+        <h2 className="text-lg md:text-xl font-semibold mb-2 md:mb-4 tracking-tighter leading-tight">
+          Comarca del Camp de Túria
+        </h2>
+        <p className="text-sm mb-4">
+          Es una de las comarcas más pobladas del centro de la provincia de
+          Valencia, con más de 155.000 habitantes y 16 municipios. De creación
+          reciente, a principios de los 70, el Camp de Turia debe su nombre al
+          canal del río Turia con mayor aprovechamiento para riego que riega las
+          zonas de Lliria, Casinos y Bétera.
+        </p>
+        <p className="text-sm mb-4">
+          Así pues, aquí encontraréis toda la información, eventos y el día a
+          día de los municipios de Benaguasil, Benissanó, Bétera, Casinos,
+          l’Eliana, Gátova, Llíria, Loriguilla, Marines, Nàquera, Olocau, la
+          Pobla de Vallbona, Riba-roja del Túria, San Antonio de Benagéber,
+          Serra i Vilamarxant.
+        </p>
       </Container>
     </Layout>
   );

@@ -9,7 +9,6 @@ import Subscribe from "../components/subscribe";
 import { HOME_OG_IMAGE_URL } from "../lib/constants";
 import { getAllCMPosts } from "../lib/api";
 
-
 export default function CampDeMorvedre({ AllCMPosts: { edges }, preview }) {
   const heroPost = edges[0]?.node;
   const cmPosts = edges.slice(1);
@@ -38,6 +37,25 @@ export default function CampDeMorvedre({ AllCMPosts: { edges }, preview }) {
         )}
         {cmPosts.length > 0 && <OpinionPosts posts={cmPosts} />}
         <Subscribe />
+        <h2 className="text-lg md:text-xl font-semibold mb-2 md:mb-4 tracking-tighter leading-tight">
+          Comarca del Camp de Morvedre
+        </h2>
+        <p className="text-sm mb-4">
+          Esta comarca nace como tal a finales de los años 90 y posee una
+          reducida extensión, siendo la más pequeña de toda Valencia. A pesar de
+          ello es una comarca con una alta densidad de población con 90.063
+          habitantes en su totalidad, debido en su gran parte a la población de
+          Sagunto. ¿Por qué se llama Camp de Morvedre? La etimología apunta a la
+          antigua denominación de Murviedro, nombre que recibió Sagunto hasta el
+          siglo XIX.
+        </p>
+        <p className="text-sm mb-4">
+          Así pues, aquí encontraréis toda la información, eventos y el día a
+          día de los municipios de Sagunto, Canet de Berenguer, Faura, Gilet,
+          Benifairó de los Valles, Cuartell, Estivella, Albalat de Taronchers,
+          Algimia de Alfara, Petrés, Quart de les Valls, Torres Torres,
+          Benavites, Alfara de la Baronía, Algar de Palancia y Segart.
+        </p>
       </Container>
     </Layout>
   );

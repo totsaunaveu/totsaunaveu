@@ -37,6 +37,17 @@ export default function Valencia({ AllVLCPosts: { edges }, preview }) {
         )}
         {vlcPosts.length > 0 && <OpinionPosts posts={vlcPosts} />}
         <Subscribe />
+        <h2 className="text-lg md:text-xl font-semibold mb-2 md:mb-4 tracking-tighter leading-tight">
+          Ciutat de València
+        </h2>
+        <p className="text-sm mb-4">
+          Valencia ciudad es la comarca más poblada de la provincia con más de
+          780.000 habitantes. La etimología de su nombre proviene del latín
+          Valentia, que significa, 'valentía'. La ciudad del Turia es la tercera
+          capital de España, repleta de vida, ambiente mediterráneo y costumbres
+          distribuidas en los 19 distritos que están subdivididos en 88 barrios
+          y pedanías.
+        </p>
       </Container>
     </Layout>
   );

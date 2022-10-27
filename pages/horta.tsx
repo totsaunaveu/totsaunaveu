@@ -42,31 +42,29 @@ export default function HortaNord({ AllHortaPosts: { edges }, preview }) {
           Comarca de l'Horta Nord
         </h2>
         <p className="text-sm mb-4">
-          L'Horta Nord es la tercera comarca más poblada de la Provincia de
-          València, justo detrás de l'Horta Oest, con poco más de 221.000
-          habitantes y dónde encontramos como principales cascos urbanos
-          Burjassot, Alboraya, Moncada, Puçol, Massamagrell y Godella.
+          En esta sección englobamos toda la actualidad de las comarcas de l’
+          Horta Nord, l’ Horta Sud y l’ Horta Oest. Aunque originariamente estas
+          tres, junto con Valencia ciudad, conformaban una única comarca,
+          llamada l’Horta de València, por el crecimiento de todas sus
+          poblaciones, tuvo que dividirse en cuatro a finales de los años 80.
         </p>
         <p className="text-sm mb-4">
-          Los pueblos y ciudades que integran la comarca son: Albalat dels
-          Sorells, Alboraya, Albuixech, Alfara del Patriarca, Almàssera,
-          Burjassot, Bonrepòs i Mirambell, El Puig, Emperador, Foios, Godella,
-          La Pobla de Farnals, Massalfassar, Massamagrell, Meliana, Moncada,
-          Museros, Puçol, Rafelbunyol, Rocafort, Tavernes Blanques, Vinalesa.
+          En la actualidad l’Horta Nord cuenta con 221.000 habitantes, l’Horta
+          Sud con 80.000 y l’Horta Oest con 360.000. Su etimología tiene que
+          ver, lógicamente, con la orientación geográfica de estas comarcas
+          respecto a la ciudad de Valencia y su modelo económico tradicional, la
+          huerta valenciana.
         </p>
         <p className="text-sm mb-4">
-          L'Horta Norte estaba integrada anteriormente en la comarca de l'Horta
-          de València, así como l'Horta Oeste, l'Horta Sur y València Ciudad.
-          Aun así, a causa del crecimiento de todas estas comarcas, se tuvo que
-          dividir en las cuatro que conocemos actualmente. L'Horta Norte, en
-          particular, fue creada en 1989, y ya formaba parte del mapa de
-          comarcas de Emili Beüt publicado en 1934.
-        </p>
-        <p className="text-sm mb-4">
-          Por otro lado, en El Puig encontramos el monasterio de Santa Maria.
-          Allí, en esa localidad y en 1237, fue donde se libró la batalla final
-          de la conquista de València por Jaime I, la llamada Batalla del Puig.
-          Con motivo de agradecimiento, el rey lo hizo construir.
+          Así pues, aquí encontraréis toda la información, eventos y el día a
+          día de los municipios de Albalat dels Sorells, Alboraia, Albuixech,
+          Alfara del Patriarca, Almàssera, Alaquàs, Albal, Alcàsser, Aldaia,
+          Alfafar, Benetússer, Beniparrell, Burjassot, Bonrepòs i Mirambell,
+          Catarroja, El Puig, Emperador, Foios, Godella, La Pobla de Farnals,
+          Lloc Nou de la Corona, Massalfassar, Massamagrell, Manises,
+          Massanassa, Mislata, Meliana, Moncada, Museros, Paterna, Paiporta,
+          Picanya, Picassent, Puçol, Rafelbunyol, Rocafort, Quart de Poblet,
+          Sedaví, Silla, Tavernes Blanques, Torrent, Vinalesa y Xirivella.
         </p>
       </Container>
     </Layout>
