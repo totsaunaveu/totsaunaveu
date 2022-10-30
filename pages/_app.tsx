@@ -1,6 +1,7 @@
 import { AppProps } from "next/app";
 import "../styles/index.css";
 import Script from "next/script";
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 `}
       </Script>
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
