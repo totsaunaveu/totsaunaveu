@@ -16,7 +16,7 @@ export default function CampDeMorvedre({ AllCMPosts: { edges }, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>Camp de Morvedre — DELS VALENCIANS</title>
+        <title>Camp de Morvedre — Tots a una veu</title>
         <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       </Head>
       <Container>

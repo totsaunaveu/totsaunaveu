@@ -7,8 +7,8 @@ export default function Intro() {
     <section className="flex-col md:flex-col flex items-center md:justify-between mt-4 mb-4 md:mb-3">
       <Link href="/">
         <h1 className="text-3xl text-center leading-none md:text-3xl font-bold uppercase">
-          <span className="text-xl">Dels</span> <br />
-          Valencians
+          <span className="text-xl">Tots</span> <br />
+          A una veu
         </h1>
       </Link>
       <h4 className="text-center font-lora md:text-center text-md mt-5">

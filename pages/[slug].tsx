@@ -32,7 +32,7 @@ export default function Post({ post, posts, preview }) {
             <article>
               <Head>
                 <title>
-                  {post.title} | Dels Valencians
+                  {post.title} | Tots a una veu
                 </title>
                 <meta
                   property="og:image"

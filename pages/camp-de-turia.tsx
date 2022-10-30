@@ -17,7 +17,7 @@ export default function CampDeTuria({ AllCTPosts: { edges }, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>Camp de Túria — DELS VALENCIANS</title>
+        <title>Camp de Túria — Tots a una veu</title>
         <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       </Head>
       <Container>

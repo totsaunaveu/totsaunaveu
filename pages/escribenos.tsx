@@ -15,7 +15,7 @@ export default function Escribenos({ allPosts: { edges }, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>Escríbenos — DELS VALENCIANS</title>
+        <title>Escríbenos — Tots a una veu</title>
       </Head>
       <Container>
         <Intro />

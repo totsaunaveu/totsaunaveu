@@ -17,7 +17,7 @@ export default function Opinion({ AllOpinionPosts: { edges }, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>Opinión — DELS VALENCIANS</title>
+        <title>Opinión — Tots a una veu</title>
         <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       </Head>
       <Container>

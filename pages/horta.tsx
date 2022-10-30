@@ -17,7 +17,7 @@ export default function HortaNord({ AllHortaPosts: { edges }, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>L'Horta — DELS VALENCIANS</title>
+        <title>L'Horta — Tots a una veu</title>
         <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       </Head>
       <Container>

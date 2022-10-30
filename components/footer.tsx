@@ -10,8 +10,8 @@ export default function Footer() {
           <h2 className="text-3xl md:text-3xl font-bold text-center uppercase tracking-tight md:tracking-tighter leading-none mb-4 mt-4">
             <Link href="/">
               <p>
-                <span className="text-lg">Dels</span> <br />
-                Valencians
+                <span className="text-lg">Tots</span> <br />
+                A una veu
               </p>
             </Link>
           </h2>
@@ -54,13 +54,20 @@ export default function Footer() {
               </p>
             </Link>
             </li>
+            <li>
+              <Link href="/escribenos">
+              <p className="mr-4 hover:underline md:mr-6 ">
+                Escríbenos
+              </p>
+            </Link>
+            </li>
           </ul>
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022{" "}
             <Link href="#" className="hover:underline">
-              Dels Valencians
+              Tots a una veu
             </Link>
-            . Tots els drets reservats.
+            . <br /> Tots els drets reservats.
           </span>
         </div>
       </Container>

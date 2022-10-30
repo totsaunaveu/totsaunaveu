@@ -16,7 +16,7 @@ export default function Valencia({ AllVLCPosts: { edges }, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>València — DELS VALENCIANS</title>
+        <title>València — Tots a una veu</title>
         <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       </Head>
       <Container>

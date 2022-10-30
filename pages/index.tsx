@@ -18,7 +18,7 @@ export default function Index({ allPosts: { edges }, allFeaturedPosts: { edges: 
   return (
     <Layout preview={preview}>
       <Head>
-        <title>DELS VALENCIANS — La veu dels valencians</title>
+        <title>Tots a una veu — La veu dels valencians</title>
         <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       </Head>
       <Container>

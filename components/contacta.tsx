@@ -25,7 +25,7 @@ export default function Contacta() {
           direccion@totsaunaveu.com
         </p> */}
         <p className="sm:text-lg mb-6 md:mb-8">
-          Dels Valencians nace de la vocación de informar desde la transparencia
+          Tots a una veu nace de la vocación de informar desde la transparencia
           y objetividad de todo aquello que acontece en la provincia de
           Valencia. De su actualidad, costumbres e idiosincrasia, sobre la base
           del respeto hacia sus dos lenguas cooficiales. <br />
