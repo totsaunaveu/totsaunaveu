@@ -20,29 +20,37 @@ export default function Footer() {
           </p>
           <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
             <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6 ">
-                Valencia
+              <Link href="/valencia">
+              <a className="mr-4 hover:underline md:mr-6 ">
+                València
               </a>
+            </Link>
             </li>
             <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6">
-                Comarcas
+              <Link href="/horta">
+              <a className="mr-4 hover:underline md:mr-6 ">
+                l'Horta
               </a>
+            </Link>
             </li>
             <li>
-              <a href="/opinion" className="mr-4 hover:underline md:mr-6">
+              <Link href="/camp-de-turia">
+              <a className="mr-4 hover:underline md:mr-6 ">
+                Camp de Túria
+              </a>
+            </Link>
+            </li>
+            <li>
+              <Link href="/camp-de-morvedre">
+              <a className="mr-4 hover:underline md:mr-6 ">
+                Camp de Morvedre
+              </a>
+            </Link>
+            </li>
+            <li>
+              <Link href="/opinion">
+              <a className="mr-4 hover:underline md:mr-6 ">
                 Opinión
-              </a>
-            </li>
-            <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6">
-                Colabora
-              </a>
-            </li>
-            <li>
-              <Link href="/escribenos">
-              <a className="mr-4 hover:underline md:mr-6">
-                Escríbenos
               </a>
             </Link>
             </li>

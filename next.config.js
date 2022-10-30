@@ -7,6 +7,10 @@ if (!process.env.WORDPRESS_API_URL) {
 
 /** @type {import('next').NextConfig} */
 module.exports = {
+  // i18n: {
+  //   locales: ['es-ES', 'ca'],
+  //   defaultLocale: 'es-ES',
+  // },
   typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if

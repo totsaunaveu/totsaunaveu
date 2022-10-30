@@ -62,7 +62,7 @@ export async function getAllPostsWithSlug() {
 export async function getAllCategoriesWithSlug() {
   const data = await fetchAPI(`
   {
-    categories {
+    categories(where: {orderby: language: ES}) {
       edges {
         node {
           name
@@ -79,7 +79,7 @@ export async function getAllPostsForHome(preview) {
   const data = await fetchAPI(
     `
     query AllPosts {
-      posts(first: 20, where: { orderby: { field: DATE, order: DESC } }) {
+      posts(first: 20, where: {orderby: {field: DATE, order: DESC}, language: ES}) {
         edges {
           node {
             title
@@ -125,6 +125,115 @@ export async function getAllPostsForHome(preview) {
 
   return data?.posts;
 }
+
+export async function getAllFeaturedPostsForHome(preview) {
+  const data = await fetchAPI(
+    `
+    query AllFeaturedPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, language: ES, tag: "portada"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+// AllPosts en Valenciano
+
+export async function getAllPostsForHomeVal(preview) {
+  const data = await fetchAPI(
+    `
+    query AllPosts {
+      posts(first: 20, where: {orderby: {field: DATE, order: DESC}, language: CA}) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+// Final API Valenciano
 
 export async function getAllOpinionPosts(preview) {
   const data = await fetchAPI(
@@ -179,6 +288,223 @@ export async function getAllOpinionPosts(preview) {
 
   return data?.posts;
 }
+
+export async function getAllHortaPosts(preview) {
+  const data = await fetchAPI(
+    `
+    query AllHNPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, categoryName: "horta"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+export async function getAllCTPosts(preview) {
+  const data = await fetchAPI(
+    `
+    query AllCTPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, categoryName: "camp-de-turia"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+export async function getAllCMPosts(preview) {
+  const data = await fetchAPI(
+    `
+    query AllCMPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, categoryName: "camp-de-morvedre"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
+export async function getAllVLCPosts(preview) {
+  const data = await fetchAPI(
+    `
+    query AllVLCPosts {
+      posts(
+        first: 20
+        where: {orderby: {field: DATE, order: DESC}, categoryName: "valencia"}
+      ) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+            categories {
+              edges {
+                node {
+                  name
+                  slug
+                }
+              }
+            }
+            author {
+              node {
+                name
+                firstName
+                lastName
+                avatar {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview,
+      },
+    }
+  );
+
+  return data?.posts;
+}
+
 
 export async function getAllCategories(preview) {
   const data = await fetchAPI(
