@@ -90,7 +90,7 @@ function Subscribe() {
             {message
               ? message
               : `Será necesario que confirmes la suscripción en tu email.`} <br />
-            <span> Si tienes problemas con el formulario, <span className="underline"><Link href="http://eepurl.com/ibgHR1" target="_blank"><a>haz click aquí</a></Link>.</span></span> 
+            <span> Si tienes problemas con el formulario, <span className="underline"><Link href="http://eepurl.com/ibgHR1" target="_blank">haz click aquí</Link>.</span></span> 
           </div>
         </div>
       </div>

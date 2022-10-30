@@ -10,10 +10,10 @@ export default function CategoryPreview({
     <div>
       <h2 className="text-2xl mb-3 leading-snug">
         <Link href={`/${slug}`}>
-          <a
+          <span
             className="hover:underline"
             dangerouslySetInnerHTML={{ __html: name }}
-          ></a>
+          ></span>
         </Link>
       </h2>
       <div

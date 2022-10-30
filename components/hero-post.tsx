@@ -24,7 +24,7 @@ export default function HeroPost({
         <div>
           <h3 className="mb-2 text-2xl lg:text-3xl leading-tight">
             <Link href={`/${slug}`}>
-              <a
+              <span
                 className="hover:underline"
                 dangerouslySetInnerHTML={{ __html: title }}
               />

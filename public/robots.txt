@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://delsvalencians.es
+Host: https://totsaunaveu.com
 
 # Sitemaps
-Sitemap: https://delsvalencians.es/sitemap.xml
+Sitemap: https://totsaunaveu.com/sitemap.xml

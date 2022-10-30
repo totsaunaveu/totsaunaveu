@@ -12,17 +12,17 @@ export default function Contacta() {
         <h3>Redacción</h3>
         <p>
           Puedes contactar con nuestra redacción para remitir notas de prensa,
-          artículos de opinión o convocatorias: redaccion@delsvalencians.es
+          artículos de opinión o convocatorias: redaccion@totsaunaveu.com
         </p>
         <h3>Atención al lector</h3>
         <p>
           Si tienes algún comentario que quieras trasladarnos puedes escribir
-          hola@delsvalencians.es
+          hola@totsaunaveu.com
         </p>
         <h3>Dirección</h3>
         <p>
           Para enviar tus cartas al director, o bien, trasladar tus comentarios:
-          direccion@delsvalencians.es
+          direccion@totsaunaveu.com
         </p> */}
         <p className="sm:text-lg mb-6 md:mb-8">
           Dels Valencians nace de la vocación de informar desde la transparencia
@@ -36,7 +36,7 @@ export default function Contacta() {
         </h2>
         <p className="sm:text-lg mb-6 md:mb-8">
           Si eres una empresa o una institución y quieres colaborar con
-          nosotros, puedes escribir a colaboraciones@delsvalencians.es
+          nosotros, puedes escribir a colaboraciones@totsaunaveu.com
         </p>
         <br />
 
@@ -54,7 +54,7 @@ export default function Contacta() {
         </h2>
         <p className="sm:text-lg mb-6 md:mb-8">
           Puedes contactar con nuestra redacción para remitir notas de prensa,
-          artículos de opinión o convocatorias: redaccion@delsvalencians.es
+          artículos de opinión o convocatorias: redaccion@totsaunaveu.com
         </p>
         <br />
 
@@ -63,7 +63,7 @@ export default function Contacta() {
         </h2>
         <p className="sm:text-lg mb-6 md:mb-8">
           Si tienes algún comentario que quieras trasladarnos puedes escribir
-          hola@delsvalencians.es
+          hola@totsaunaveu.com
         </p>
         <br />
         <h2 className="text-xl sm:text-2xl font-semibold mb-2 md:mb-4">
@@ -72,7 +72,7 @@ export default function Contacta() {
 
         <p className="sm:text-lg mb-6 md:mb-8">
           Para enviar tus cartas al director, o bien, trasladar tus comentarios:
-          direccion@delsvalencians.es
+          direccion@totsaunaveu.com
         </p>
         <br />
 

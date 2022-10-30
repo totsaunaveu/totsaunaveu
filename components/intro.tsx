@@ -17,42 +17,33 @@ export default function Intro() {
 
       <div className="justify-between items-center text-center w-full lg:flex lg:w-auto">
         <ul className="flex flex-row flex-wrap justify-center text-xs md:text-sm font-serif font-semibold mt-3 mb-3 lg:space-x-8 lg:mt-6">
-          {/* <li>
-            <a href="#" className="uppercase hover:underline mr-4 mb-4">
-              <span>
-                <Image
-                  src="/senyera.svg"
-                  layout="fixed"
-                  width={20}
-                  height={12}
-                />
-              </span>{" "}
-              En Valencià
-            </a>
-          </li> */}
           <li>
             <Link href="/valencia">
-              <a className="uppercase hover:underline mr-4 mb-4">València</a>
+              <p className="uppercase hover:underline mr-4 mb-4">València</p>
             </Link>
           </li>
           <li>
             <Link href="/horta">
-              <a className="uppercase hover:underline mr-4 mb-4">l'Horta</a>
+              <p className="uppercase hover:underline mr-4 mb-4">l'Horta</p>
             </Link>
           </li>
           <li>
             <Link href="/camp-de-turia">
-              <a className="uppercase hover:underline mr-4 mb-4">Camp de Túria</a>
+              <p className="uppercase hover:underline mr-4 mb-4">
+                Camp de Túria
+              </p>
             </Link>
           </li>
           <li>
             <Link href="/camp-de-morvedre">
-              <a className="uppercase hover:underline mr-4 mb-4">Camp de Morvedre</a>
+              <p className="uppercase hover:underline mr-4 mb-4">
+                Camp de Morvedre
+              </p>
             </Link>
           </li>
           <li>
             <Link href="/opinion">
-              <a className="uppercase hover:underline mr-4 mb-4">Opinión</a>
+              <p className="uppercase hover:underline mr-4 mb-4">Opinión</p>
             </Link>
           </li>
         </ul>

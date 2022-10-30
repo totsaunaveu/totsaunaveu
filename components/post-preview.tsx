@@ -22,10 +22,10 @@ export default function PostPreview({
       </div>
       <h3 className="text-2xl mb-2 leading-snug">
         <Link href={`/${slug}`}>
-          <a
+          <span
             className="hover:underline"
             dangerouslySetInnerHTML={{ __html: title }}
-          ></a>
+          ></span>
         </Link>
       </h3>
       <div className="text-xs mb-2">

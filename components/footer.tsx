@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="mx-auto max-w-screen-xl text-center">
           <h2 className="text-3xl md:text-3xl font-bold text-center uppercase tracking-tight md:tracking-tighter leading-none mb-4 mt-4">
             <Link href="/">
-              <a>
+              <p>
                 <span className="text-lg">Dels</span> <br />
                 Valencians
-              </a>
+              </p>
             </Link>
           </h2>
           <p className="my-6 text-gray-500 dark:text-gray-400">
@@ -21,45 +21,45 @@ export default function Footer() {
           <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
             <li>
               <Link href="/valencia">
-              <a className="mr-4 hover:underline md:mr-6 ">
+              <p className="mr-4 hover:underline md:mr-6 ">
                 València
-              </a>
+              </p>
             </Link>
             </li>
             <li>
               <Link href="/horta">
-              <a className="mr-4 hover:underline md:mr-6 ">
+              <p className="mr-4 hover:underline md:mr-6 ">
                 l'Horta
-              </a>
+              </p>
             </Link>
             </li>
             <li>
               <Link href="/camp-de-turia">
-              <a className="mr-4 hover:underline md:mr-6 ">
+              <p className="mr-4 hover:underline md:mr-6 ">
                 Camp de Túria
-              </a>
+              </p>
             </Link>
             </li>
             <li>
               <Link href="/camp-de-morvedre">
-              <a className="mr-4 hover:underline md:mr-6 ">
+              <p className="mr-4 hover:underline md:mr-6 ">
                 Camp de Morvedre
-              </a>
+              </p>
             </Link>
             </li>
             <li>
               <Link href="/opinion">
-              <a className="mr-4 hover:underline md:mr-6 ">
+              <p className="mr-4 hover:underline md:mr-6 ">
                 Opinión
-              </a>
+              </p>
             </Link>
             </li>
           </ul>
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022{" "}
-            <a href="#" className="hover:underline">
+            <Link href="#" className="hover:underline">
               Dels Valencians
-            </a>
+            </Link>
             . Tots els drets reservats.
           </span>
         </div>

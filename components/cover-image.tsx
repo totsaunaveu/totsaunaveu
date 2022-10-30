@@ -16,16 +16,16 @@ interface Props {
 export default function CoverImage({ title, coverImage, slug }: Props) {
   const image = (
     <Image
-      layout="responsive"
-      width={50}
-      height={35}
+      // layout="responsive"
+      width={1000}
+      height={700}
       priority
-      objectFit="contain"
+      // objectFit="contain"
       alt={`Imagen destacada de ${title}`}
       src={coverImage?.node.sourceUrl}
-      className={cn("shadow-small", {
-        "hover:shadow-medium transition-shadow duration-200": slug,
-      })}
+      // className={cn("shadow-small", {
+      //   "hover:shadow-medium transition-shadow duration-200": slug,
+      // })}
     />
   );
   const altText = coverImage?.node.altText;
@@ -34,12 +34,12 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
     <div className="sm:mx-0">
       {slug ? (
         <Link href={`/${slug}`}>
-          <a aria-label={title}>{image}</a>
+          <span aria-label={title}>{image}</span>
         </Link>
       ) : (
         image
       )}
-      <div className="text-xs text-neutral-400 md:text-sm">{altText}</div>
+      <div className="text-xs text-neutral-400 md:text-sm mt-2">{altText}</div>
     </div>
     
   );
