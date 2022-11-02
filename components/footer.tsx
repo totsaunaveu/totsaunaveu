@@ -65,9 +65,9 @@ export default function Footer() {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022{" "}
             <Link href="#" className="hover:underline">
-              Tots a una veu
+              Tots a una Veu
             </Link>
-            . <br /> Tots els drets reservats.
+            . <br /> Todos los derechos reservados.
           </span>
         </div>
       </Container>

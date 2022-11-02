@@ -14,11 +14,13 @@ export default function Index({ allPosts: { edges }, allFeaturedPosts: { edges: 
   // const heroPost = edges[0]?.node
   const heroFeaturedPost = featuredEdges[0]?.node
   let morePosts = edges
+  const firstPostOfMorePosts = edges[0]?.node
   // const morePosts = edges.filter((item) => item !== featuredEdges[0]?.node)
   // Si última noticia es la misma que la de Portada, se elimina de morePosts.
-  console.log(morePosts[0]?.node.id)
+  // console.log("El ID del heroFeaturedPost es: "+heroFeaturedPost.id)
+  // console.log("El ID del firstPostOfMorePost es: "+firstPostOfMorePosts.id)
 
-  if (morePosts[0]?.id === heroFeaturedPost.id) {
+  if (firstPostOfMorePosts.id == heroFeaturedPost.id) {
     morePosts = edges.slice(1)
   }
 

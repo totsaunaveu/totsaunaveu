@@ -83,6 +83,7 @@ export async function getAllPostsForHome(preview) {
         edges {
           node {
             title
+            id
             excerpt
             slug
             date
