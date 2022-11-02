@@ -13,9 +13,18 @@ import { getAllPostsForHome, getAllFeaturedPostsForHome } from '../lib/api'
 export default function Index({ allPosts: { edges }, allFeaturedPosts: { edges: featuredEdges }, preview }) {
   // const heroPost = edges[0]?.node
   const heroFeaturedPost = featuredEdges[0]?.node
-  const morePosts = edges.slice(1)
+  let morePosts
   // const morePosts = edges.filter((item) => item !== featuredEdges[0]?.node)
-  console.log(morePosts)
+
+  // Si última noticia es la misma que la de Portada, se elimina de morePosts.
+
+  if (featuredEdges[0]?.node.id === heroFeaturedPost.id) {
+    morePosts = edges.slice(1)
+  } else {
+    morePosts
+  }
+
+
 
 
   return (

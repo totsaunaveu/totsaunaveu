@@ -137,6 +137,7 @@ export async function getAllFeaturedPostsForHome(preview) {
         edges {
           node {
             title
+            id
             excerpt
             slug
             date
@@ -190,6 +191,7 @@ export async function getAllPostsForHomeVal(preview) {
         edges {
           node {
             title
+            id
             excerpt
             slug
             date
