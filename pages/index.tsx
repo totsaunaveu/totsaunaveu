@@ -23,7 +23,7 @@ export default function Index({ allPosts: { edges }, allFeaturedPosts: { edges: 
   return (
     <Layout preview={preview}>
       <Head>
-        <title>Tots a una veu — La veu dels valencians</title>
+        <title>Tots a una veu — La voz de los valencianos</title>
         <meta property="og:image" content={HOME_OG_IMAGE_URL} />
          {/* Global Site Tag (gtag.js) - Google Analytics */}
          <script
