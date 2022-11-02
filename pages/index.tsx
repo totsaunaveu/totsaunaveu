@@ -7,22 +7,26 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import Subscribe from '../components/subscribe'
 import { HOME_OG_IMAGE_URL } from "../lib/constants";
-import { getAllPostsForHome, getAllFeaturedPostsForHome } from '../lib/api'
+import { getAllPostsForHome, getAllFeaturedPostsForHome, getPostAndMorePosts } from '../lib/api'
 // import { getAllFeaturedPostsForHome } from '../lib/api'
 
 export default function Index({ allPosts: { edges }, allFeaturedPosts: { edges: featuredEdges }, preview }) {
   // const heroPost = edges[0]?.node
   const heroFeaturedPost = featuredEdges[0]?.node
-  let morePosts
+  let morePosts = edges
   // const morePosts = edges.filter((item) => item !== featuredEdges[0]?.node)
-
   // Si última noticia es la misma que la de Portada, se elimina de morePosts.
+  console.log(morePosts[0]?.node.id)
 
-  if (featuredEdges[0]?.node.id === heroFeaturedPost.id) {
+  if (morePosts[0]?.id === heroFeaturedPost.id) {
     morePosts = edges.slice(1)
-  } else {
-    morePosts
   }
+
+  // if (featuredEdges[0]?.node.id !== heroFeaturedPost.id) {
+  //   morePosts = edges.slice(1)
+  // } else {
+  //   morePosts
+  // }
 
 
 

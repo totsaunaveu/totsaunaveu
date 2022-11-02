@@ -8,11 +8,11 @@ export default function Intro() {
       <Link href="/">
         <h1 className="text-3xl text-center leading-none md:text-3xl font-bold uppercase">
           <span className="text-xl">Tots</span> <br />
-          A una veu
+          A una Veu
         </h1>
       </Link>
       <h4 className="text-center font-lora md:text-center text-md mt-5">
-        La veu dels valencians. Diari de la província de València.
+        La voz de los valencianos. Diario de la provincia de Valencia.
       </h4>
 
       <div className="justify-between items-center text-center w-full lg:flex lg:w-auto">

@@ -11,12 +11,12 @@ export default function Footer() {
             <Link href="/">
               <p>
                 <span className="text-lg">Tots</span> <br />
-                A una veu
+                A una Veu
               </p>
             </Link>
           </h2>
           <p className="my-6 text-gray-500 dark:text-gray-400">
-            La veu dels valencians. Diari de la província de València.
+            La voz de los valencianos. Diario de la provincia de Valencia.
           </p>
           <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
             <li>

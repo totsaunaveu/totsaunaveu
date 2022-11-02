@@ -65,7 +65,7 @@ export default function Meta() {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`La veu dels valencians. Diari de la província de València.`}
+        content={`La voz de los valencianos. Diario de la provincia de Valencia.`}
       />
       {/* <meta property="og:image" content={HOME_OG_IMAGE_URL} /> */}
     </Head>
