@@ -13,8 +13,10 @@ import { getAllPostsForHome, getAllFeaturedPostsForHome } from '../lib/api'
 export default function Index({ allPosts: { edges }, allFeaturedPosts: { edges: featuredEdges }, preview }) {
   // const heroPost = edges[0]?.node
   const heroFeaturedPost = featuredEdges[0]?.node
-  // const morePosts = edges.slice(heroFeaturedPost)
-  const morePosts = edges.filter((item) => item !== featuredEdges[0]?.node)
+  const morePosts = edges.slice(1)
+  // const morePosts = edges.filter((item) => item !== featuredEdges[0]?.node)
+  console.log(morePosts)
+
 
   return (
     <Layout preview={preview}>
