@@ -23,7 +23,7 @@ export default function HortaNord({ AllHortaPosts: { edges }, preview }) {
       <Container>
         <Intro />
         <h2 className="mt-12 mb-4 text-center text-5xl md:text-6xl font-semibold tracking-tighter leading-tight">
-          Horta Nord
+        L'Horta
         </h2>
         {heroPost && (
           <HeroPost
